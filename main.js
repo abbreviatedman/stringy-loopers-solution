@@ -1,7 +1,8 @@
 function printChars(str) {
   let i = 0;
   while (i < str.length) {
-    console.log(str[i]);
+    const char = str[i];
+    console.log(char);
     i = i + 1;
   }
 }
@@ -11,13 +12,13 @@ function printChars(str) {
 
 function printEveryThirdChar(str) {
   let i = 2;
-  while ( i < str.length) {
-    console.log(str[i]);
+  while (i < str.length) {
+    const char = str[i];
+    console.log(char);
 
     i = i + 3;
   }
 }
-
 // printEveryThirdChar('I am the alfalfa and the omelette.');
 
 function printCharsBackwards(str) {
@@ -35,14 +36,15 @@ function vowelsOnly(str) {
   const vowels = 'aeiou';
   let i = 0;
   while (i < str.length) {
-    if (vowels.includes(str[i])) {
-      console.log(str[i]);
-    }
+    const char = str[i];
+    // if (vowels.includes(char)) {
+    //   console.log(char);
+    // }
 
     // or, without the includes:
-    // if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
-    //   console.log(str[i]);
-    // }
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+      console.log(char);
+    }
 
     i = i + 1;
   }
@@ -51,7 +53,7 @@ function vowelsOnly(str) {
 // const str = 'Regular expressions are for term 2.';
 // vowelsOnly(str);
 
-function printAfter(start, str) {
+function printAfter(str, start) {
   let i = start;
   while ( i < str.length) {
     console.log(str[i]);
@@ -59,8 +61,8 @@ function printAfter(start, str) {
   }
 }
 
-// printAfter(1, 'slaughter')
-// printAfter(7, "I don't love you!")
+// printAfter('slaughter', 1)
+// printAfter("I don't love you!", 7)
 
 function indexOfU(str) {
   let i = 0;
@@ -69,6 +71,7 @@ function indexOfU(str) {
     if (str[i] === 'u') {
       console.log(i);
     }
+
   }
 }
 
@@ -88,7 +91,7 @@ function first5VowelsOnly(str) {
   }
 }
 
-const str2 = 'Regular expressions are for term 2.';
+// const str2 = 'Regular expressions are for term 2.';
 
 // first5VowelsOnly(str2);
 // first5VowelsOnly('hello');
